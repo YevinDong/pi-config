@@ -1,0 +1,23 @@
+# Credentials and machine-local trust
+**/auth.json
+**/credentials.json
+**/*credentials*.json
+trust.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.local.json
+
+# Runtime state and generated installs
+sessions/
+models-store.json
+npm/
+git/
+bin/
+node_modules/
+
+# Logs and OS files
+*.log
+.DS_Store
