@@ -21,3 +21,4 @@ node_modules/
 # Logs and OS files
 *.log
 .DS_Store
+web-search-cache

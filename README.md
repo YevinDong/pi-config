@@ -36,6 +36,7 @@
 
 - `codereview-architect`
 - `find-skills`
+- `github-cli`
 - `self-learning`
 - `tdd`
 
