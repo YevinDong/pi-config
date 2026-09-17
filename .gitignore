@@ -22,3 +22,5 @@ node_modules/
 *.log
 .DS_Store
 web-search-cache
+missions
+run-history.jsonl

@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.84.3",
+  "lastChangelogVersion": "0.85.1",
   "theme": "light",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.6-sol",
@@ -15,7 +15,8 @@
     "npm:@narumitw/pi-usage",
     "npm:pi-subagents",
     "npm:@narumitw/pi-goal",
-    "npm:pi-open-tui"
+    "npm:pi-open-tui",
+    "npm:@vndv/pi-codegraph"
   ],
   "compaction": {
     "enabled": true

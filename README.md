@@ -9,6 +9,8 @@
 | 路径 | 内容 |
 | --- | --- |
 | `settings.json` | 默认模型、思考等级、主题、重试、上下文压缩和第三方 Packages |
+| `AGENTS.md` | 全局工作规则，包括临时文件目录约定 |
+| `scripts/` | 全局规则使用的辅助脚本 |
 | `caveman.json` | Caveman 输出风格配置 |
 | `open-tui.json` | Open TUI 中文界面、页脚和遥测显示配置 |
 | `skills/` | 当前已安装 Skills 的快照 |
@@ -31,6 +33,7 @@
 - `pi-subagents`
 - `@narumitw/pi-goal`
 - `pi-open-tui`
+- `@vndv/pi-codegraph`
 
 ### Skills
 
@@ -181,6 +184,35 @@ themes/<name>.json
 ```
 
 修改资源后，可在 Pi 中运行 `/reload`。
+
+## 临时计划与脚本
+
+全局 `AGENTS.md` 要求 Pi 将临时计划和一次性辅助脚本放入当前工作目录的 `.local/`。检查或创建目录：
+
+```bash
+"$PI_CODING_AGENT_DIR/scripts/check-local.sh" || \
+  "$PI_CODING_AGENT_DIR/scripts/create-local.sh"
+```
+
+创建脚本会生成 `.local/` 和 `.local/.gitignore`，并确保后者包含单独一行 `*`，因此目录内文件不会进入 Git。
+
+## CodeGraph
+
+`settings.json` 通过 `@vndv/pi-codegraph` 注册原生 `codegraph_*` 工具。每台设备还需单独安装 CodeGraph CLI：
+
+```bash
+npm install -g @colbymchenry/codegraph
+codegraph --version
+```
+
+每个需要检索的项目初始化一次索引：
+
+```bash
+cd /path/to/project
+codegraph init
+```
+
+启动或 `/reload` Pi 后，扩展会提示 Agent 优先用 CodeGraph 做结构、调用链和影响范围检索；字面文本搜索仍使用 `rg`/`grep`。
 
 ## 不会同步的内容
 
