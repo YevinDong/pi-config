@@ -6,7 +6,7 @@
     "wheelScrollLines": 4
   },
   "icons": {
-    "mode": "ascii"
+    "mode": "auto"
   },
   "footerSegments": {
     "cwd": true,
@@ -28,5 +28,8 @@
     "tokens": true,
     "stalls": true,
     "cost": true
+  },
+  "thinkingPeek": {
+    "lines": 2
   }
 }

@@ -1,5 +1,11 @@
 # Global workspace rules
 
+## Language conventions
+
+- Commit messages and pull request titles must be written in English.
+- Pull request descriptions may be written in Chinese.
+- Code comments may be written in Chinese.
+
 ## Temporary files
 
 - Put temporary plans and disposable helper scripts in the current working directory's `.local/` directory.
