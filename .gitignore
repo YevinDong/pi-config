@@ -24,3 +24,5 @@ node_modules/
 web-search-cache
 missions
 run-history.jsonl
+pi-subagents
+install

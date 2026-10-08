@@ -1,6 +1,6 @@
 {
-  "lastChangelogVersion": "0.87.1",
-  "theme": "light/bramble-current",
+  "lastChangelogVersion": "1.1.0",
+  "theme": "quartz-fjord/bramble-current",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-6-astra",
   "defaultThinkingLevel": "medium",
